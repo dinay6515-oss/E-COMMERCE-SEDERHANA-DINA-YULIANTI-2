@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dina Bakery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🥐 DINA BAKERY</h1>
+    <p>Fresh Bread • Fresh Taste • Fresh Happiness</p>
+</header>
+
+<nav>
+    <a href="#">Beranda</a>
+    <a href="#">Produk</a>
+    <a href="#">Promo</a>
+    <a href="#">Kontak</a>
+</nav>
+
+<section class="produk">
+
+<div class="card">
+<img src="https://source.unsplash.com/300x250/?croissant">
+<h3>Butter Croissant</h3>
+<p>Rp18.000</p>
+<button onclick="tambah('Butter Croissant',18000)">Tambah</button>
+</div>
+
+<div class="card">
+<img src="https://source.unsplash.com/300x250/?bread">
+<h3>Milk Bread</h3>
+<p>Rp15.000</p>
+<button onclick="tambah('Milk Bread',15000)">Tambah</button>
+</div>
+
+<div class="card">
+<img src="https://source.unsplash.com/300x250/?cake">
+<h3>Chocolate Cake</h3>
+<p>Rp40.000</p>
+<button onclick="tambah('Chocolate Cake',40000)">Tambah</button>
+</div>
+
+<div class="card">
+<img src="https://source.unsplash.com/300x250/?donut">
+<h3>Donut</h3>
+<p>Rp12.000</p>
+<button onclick="tambah('Donut',12000)">Tambah</button>
+</div>
+
+<div class="card">
+<img src="https://source.unsplash.com/300x250/?cookies">
+<h3>Cookies</h3>
+<p>Rp25.000</p>
+<button onclick="tambah('Cookies',25000)">Tambah</button>
+</div>
+
+<div class="card">
+<img src="https://source.unsplash.com/300x250/?muffin">
+<h3>Muffin</h3>
+<p>Rp17.000</p>
+<button onclick="tambah('Muffin',17000)">Tambah</button>
+</div>
+
+<div class="card">
+<img src="https://source.unsplash.com/300x250/?baguette">
+<h3>Baguette</h3>
+<p>Rp20.000</p>
+<button onclick="tambah('Baguette',20000)">Tambah</button>
+</div>
+
+<div class="card">
+<img src="https://source.unsplash.com/300x250/?pastry">
+<h3>Danish Pastry</h3>
+<p>Rp23.000</p>
+<button onclick="tambah('Danish Pastry',23000)">Tambah</button>
+</div>
+
+</section>
+
+<section class="cart">
+
+<h2>🛒 Keranjang Belanja</h2>
+
+<ul id="keranjang"></ul>
+
+<h3>Total : Rp <span id="total">0</span></h3>
+
+<button class="checkout" onclick="checkout()">
+Checkout
+</button>
+
+</section>
+
+<footer>
+
+<p>©2026 Dina Bakery</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
