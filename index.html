@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dina Bakery</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BX998EH49T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BX998EH49T');
+</script>
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#d9d9d9;
+color:#333;
+}
+
+/* ================= NAVBAR ================= */
+
+nav{
+
+background:#5C4033;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:18px 8%;
+
+position:sticky;
+
+top:0;
+
+z-index:999;
+
+}
+
+.logo{
+
+font-size:30px;
+
+font-weight:bold;
+
+color:white;
+
+}
+
+.menu a{
+
+text-decoration:none;
+
+margin-left:25px;
+
+color:white;
+
+font-weight:500;
+
+transition:.3s;
+
+}
+
+.menu a:hover{
+
+color:#FFD54F;
+
+}
+
+/* ================= HERO ================= */
+
+.hero{
+
+background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),url("https://images.unsplash.com/photo-1509440159596-0249088772ff?w=1600");
+
+background-size:cover;
+
+background-position:center;
+
+height:450px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+text-align:center;
+
+color:white;
+
+}
+
+.hero h1{
+
+font-size:50px;
+
+}
+
+.hero p{
+
+margin-top:15px;
+
+font-size:20px;
+
+}
+
+.hero button{
+
+margin-top:25px;
+
+padding:15px 35px;
+
+border:none;
+
+background:#FFD54F;
+
+font-size:18px;
+
+border-radius:30px;
+
+cursor:pointer;
+
+font-weight:bold;
+
+transition:.3s;
+
+}
+
+.hero button:hover{
+
+background:#FFB300;
+
+}
+
+/* ================= JUDUL ================= */
+
+.judul{
+
+text-align:center;
+
+font-size:35px;
+
+margin-top:60px;
+
+color:#5C4033;
+
+}
+
+/* ================= PRODUK ================= */
+
+.container{
+
+width:90%;
+
+margin:auto;
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:25px;
+
+padding:50px 0;
+
+}
+
+.card{
+
+background:white;
+
+border-radius:15px;
+
+overflow:hidden;
+
+box-shadow:0 10px 20px rgba(0,0,0,.2);
+
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.card img{
+
+width:100%;
+
+height:220px;
+
+object-fit:cover;
+
+}
+
+.card-body{
+
+padding:18px;
+
+}
+
+.card h3{
+
+color:#5C4033;
+
+margin-bottom:10px;
+
+}
+
+.deskripsi{
+
+font-size:14px;
+
+color:#666;
+
+line-height:22px;
+
+margin-bottom:15px;
+
+}
+
+.harga{
+
+font-size:22px;
+
+font-weight:bold;
+
+color:#A0522D;
+
+margin-bottom:15px;
+
+}
+
+.card button{
+
+width:100%;
+
+padding:12px;
+
+border:none;
+
+background:#5C4033;
+
+color:white;
+
+font-size:16px;
+
+border-radius:8px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.card button:hover{
+
+background:#7B5A46;
+
+}
+
+/* ================= KERANJANG ================= */
+
+.cart{
+
+width:90%;
+
+margin:40px auto;
+
+background:white;
+
+padding:25px;
+
+border-radius:15px;
+
+box-shadow:0 10px 20px rgba(0,0,0,.2);
+
+}
+
+.cart h2{
+
+color:#5C4033;
+
+margin-bottom:20px;
+
+}
+
+#cart-items{
+
+margin-bottom:20px;
+
+}
+
+.total{
+
+font-size:22px;
+
+font-weight:bold;
+
+color:#A0522D;
+
+}
+
+/* ================= FORM ================= */
+
+.checkout{
+
+width:90%;
+
+margin:40px auto;
+
+background:white;
+
+padding:25px;
+
+border-radius:15px;
+
+box-shadow:0 10px 20px rgba(0,0,0,.2);
+
+}
+
+.checkout input,
+
+.checkout textarea,
+
+.checkout select{
+
+width:100%;
+
+padding:12px;
+
+margin-top:10px;
+
+margin-bottom:18px;
+
+border:1px solid #ccc;
+
+border-radius:8px;
+
+}
+
+.checkout button{
+
+width:100%;
+
+padding:15px;
+
+background:#4CAF50;
+
+border:none;
+
+color:white;
+
+font-size:18px;
+
+border-radius:8px;
+
+cursor:pointer;
+
+}
+
+.checkout button:hover{
+
+background:#388E3C;
+
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+
+margin-top:60px;
+
+background:#5C4033;
+
+color:white;
+
+padding:30px;
+
+text-align:center;
+
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:35px;
+
+}
+
+.hero p{
+
+font-size:17px;
+
+}
+
+.menu{
+
+display:none;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">🥐 Dina Bakery</div>
+
+<div class="menu">
+
+<a href="#">Home</a>
+
+<a href="#produk">Produk</a>
+
+<a href="#cart">Keranjang</a>
+
+<a href="#checkout">Checkout</a>
+
+</div>
+
+</nav>
+
+<section class="hero">
+
+<div>
+
+<h1>Fresh Bread Everyday</h1>
+
+<p>Roti, Cake & Croissant Premium</p>
+
+<button onclick="document.getElementById('produk').scrollIntoView()">Belanja Sekarang</button>
+
+</div>
+
+</section>
+
+<h2 class="judul" id="produk">Menu Dina Bakery</h2>
+<div class="container">
+
+<!-- Produk 1 -->
+<div class="card">
+
+<img src="download.jpg" alt="Croissant Butter">
+
+<div class="card-body">
+
+<h3>Croissant Butter</h3>
+
+<p class="deskripsi">
+Croissant renyah dengan lapisan mentega premium yang lembut dan gurih.
+</p>
+
+<p class="harga">
+Rp25.000
+</p>
+
+<button onclick="tambahKeranjang('Croissant Butter',25000)">
+Tambah ke Keranjang
+</button>
+
+</div>
+
+</div>
+
+<!-- Produk 2 -->
+<div class="card">
+
+<img src="Flaky Chocolate Croissants Recipe – Easy & Delicious!.jpg" alt="Chocolate Croissant">
+
+<div class="card-body">
+
+<h3>Chocolate Croissant</h3>
+
+<p class="deskripsi">
+Croissant isi cokelat lumer dengan rasa manis yang lezat.
+</p>
+
+<p class="harga">
+Rp30.000
+</p>
+
+<button onclick="tambahKeranjang('Chocolate Croissant',30000)">
+Tambah ke Keranjang
+</button>
+
+</div>
+
+</div>
+
+<!-- Produk 3 -->
+<div class="card">
+
+<img src="Easy Almond Croissants Recipe.jpg" alt="Almond Croissant">
+
+<div class="card-body">
+
+<h3>Almond Croissant</h3>
+
+<p class="deskripsi">
+Croissant dengan taburan almond panggang yang renyah.
+</p>
+
+<p class="harga">
+Rp32.000
+</p>
+
+<button onclick="tambahKeranjang('Almond Croissant',32000)">
+Tambah ke Keranjang
+</button>
+
+</div>
+
+</div>
+
+<!-- Produk 4 -->
+<div class="card">
+
+<img src="Pin_Parii🦋.jpg" alt="Donat Strawberry">
+
+<div class="card-body">
+
+<h3>Donat Strawberry</h3>
+
+<p class="deskripsi">
+Donat empuk dengan topping strawberry yang manis.
+</p>
+
+<p class="harga">
+Rp18.000
+</p>
+
+<button onclick="tambahKeranjang('Donat Strawberry',18000)">
+Tambah ke Keranjang
+</button>
+
+</div>
+
+</div>
+
+<!-- Produk 5 -->
+<div class="card">
+
+<img src="download (1).jpg" alt="Brownies">
+
+<div class="card-body">
+
+<h3>Brownies Premium</h3>
+
+<p class="deskripsi">
+Brownies cokelat premium dengan tekstur lembut dan lumer.
+</p>
+
+<p class="harga">
+Rp35.000
+</p>
+
+<button onclick="tambahKeranjang('Brownies Premium',35000)">
+Tambah ke Keranjang
+</button>
+
+</div>
+
+</div>
+<!-- Produk 6 -->
+<div class="card">
+
+<img src="Delicious Strawberry Cheesecake.jpg" alt="Red Velvet Cake">
+
+<div class="card-body">
+
+<h3>Red Velvet Cake</h3>
+
+<p class="deskripsi">
+Kue red velvet lembut dengan cream cheese premium.
+</p>
+
+<p class="harga">
+Rp85.000
+</p>
+
+<button onclick="tambahKeranjang('Red Velvet Cake',85000)">
+Tambah ke Keranjang
+</button>
+
+</div>
+
+</div>
+
+<!-- Produk 7 -->
+<div class="card">
+
+<img src="🍰🍰🍰🍰.jpg" alt="Blueberry Muffin">
+
+<div class="card-body">
+
+<h3>Blueberry Muffin</h3>
+
+<p class="deskripsi">
+Muffin lembut dengan blueberry segar dan aroma vanilla.
+</p>
+
+<p class="harga">
+Rp22.000
+</p>
+
+<button onclick="tambahKeranjang('Blueberry Muffin',22000)">
+Tambah ke Keranjang
+</button>
+
+</div>
+
+</div>
+
+<!-- Produk 8 -->
+<div class="card">
+
+<img src="The Best Cinnamon Roll Recipe – Easy Step-by-Step Guide.jpg" alt="Cinnamon Roll">
+
+<div class="card-body">
+
+<h3>Cinnamon Roll</h3>
+
+<p class="deskripsi">
+Roti gulung kayu manis dengan glaze yang manis.
+</p>
+
+<p class="harga">
+Rp28.000
+</p>
+
+<button onclick="tambahKeranjang('Cinnamon Roll',28000)">
+Tambah ke Keranjang
+</button>
+
+</div>
+
+</div>
+
+<!-- Produk 9 -->
+<div class="card">
+
+<img src="usa.jpg" alt="Cheese Bread">
+
+<div class="card-body">
+
+<h3>Cheese Bread</h3>
+
+<p class="deskripsi">
+Roti keju lembut dengan isian keju mozzarella.
+</p>
+
+<p class="harga">
+<Rp35 class=""></Rp35>
+</p>
+
+<button onclick="tambahKeranjang('Cheese Bread',20000)">
+Tambah ke Keranjang
+</button>
+
+</div>
+
+</div>
+
+<!-- Produk 10 -->
+<div class="card">
+
+<img src="Compilations.jpg" alt="Birthday Cake">
+
+<div class="card-body">
+
+<h3>Birthday Cake</h3>
+
+<p class="deskripsi">
+Kue ulang tahun dengan dekorasi cantik, cocok untuk berbagai acara.
+</p>
+
+<p class="harga">
+Rp150.000
+</p>
+
+<button onclick="tambahKeranjang('Birthday Cake',150000)">
+Tambah ke Keranjang
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ================= KERANJANG ================= -->
+
+<section class="cart" id="cart">
+
+<h2>🛒 Keranjang Belanja</h2>
+
+<table width="100%" border="1" cellspacing="0" cellpadding="10">
+
+<thead>
+
+<tr style="background:#5C4033;color:white;">
+
+<th>Produk</th>
+
+<th>Harga</th>
+
+<th>Jumlah</th>
+
+<th>Subtotal</th>
+
+<th>Aksi</th>
+
+</tr>
+
+</thead>
+
+<tbody id="cart-items">
+
+</tbody>
+
+</table>
+
+<br>
+
+<h2 class="total">
+
+Total Belanja :
+Rp <span id="total">0</span>
+
+</h2>
+
+</section>
+<!-- ================= FORM CHECKOUT ================= -->
+
+<section class="checkout" id="checkout">
+
+<h2 style="color:#5C4033; margin-bottom:20px;">
+📝 Form Checkout
+</h2>
+
+<label>Nama Lengkap</label>
+
+<input
+type="text"
+id="nama"
+placeholder="Masukkan nama lengkap">
+
+<label>Alamat Lengkap</label>
+
+<textarea
+id="alamat"
+rows="4"
+placeholder="Masukkan alamat lengkap"></textarea>
+
+<label>Nomor HP</label>
+
+<input
+type="tel"
+id="hp"
+placeholder="08xxxxxxxxxx">
+
+<label>Metode Pembayaran</label>
+
+<select id="metode" onchange="pilihPembayaran()">
+
+<option value="">-- Pilih Metode Pembayaran --</option>
+
+<option value="DANA">DANA</option>
+
+<option value="ShopeePay">ShopeePay</option>
+
+<option value="BRI">Bank BRI</option>
+
+<option value="BNI">Bank BNI</option>
+
+<option value="SeaBank">SeaBank</option>
+
+</select>
+
+<br><br>
+
+<div id="infoPembayaran"
+style="
+background:#f3f3f3;
+padding:15px;
+border-radius:10px;
+border:1px solid #ddd;
+margin-bottom:20px;">
+
+Silakan pilih metode pembayaran.
+
+</div>
+
+<button onclick="checkout()">
+
+Checkout Sekarang
+
+</button>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<h3>Dina Bakery</h3>
+
+<p>Fresh Bread • Cake • Croissant Premium</p>
+
+<p>📍 Bandung, Indonesia</p>
+
+<p>📞 0812-3456-7890</p>
+
+<p>© 2026 Dina Bakery. All Rights Reserved.</p>
+
+</footer>
+
+<script>
+    let keranjang = [];
+let total = 0;
+
+function tambahKeranjang(nama, harga) {
+
+    keranjang.push({
+        nama: nama,
+        harga: harga
+    });
+
+    tampilKeranjang();
+
+}
+
+function tampilKeranjang() {
+
+    let isi = document.getElementById("cart-items");
+
+    isi.innerHTML = "";
+
+    total = 0;
+
+    keranjang.forEach((item, index) => {
+
+        total += item.harga;
+
+        isi.innerHTML += `
+
+        <tr>
+
+        <td>${item.nama}</td>
+
+        <td>Rp ${item.harga.toLocaleString("id-ID")}</td>
+
+        <td>1</td>
+
+        <td>Rp ${item.harga.toLocaleString("id-ID")}</td>
+
+        <td>
+
+        <button onclick="hapusProduk(${index})">
+
+        Hapus
+
+        </button>
+
+        </td>
+
+        </tr>
+
+        `;
+
+    });
+
+    document.getElementById("total").innerHTML =
+    total.toLocaleString("id-ID");
+
+}
+
+function hapusProduk(index){
+
+    keranjang.splice(index,1);
+
+    tampilKeranjang();
+
+}
+
+function pilihPembayaran(){
+
+let metode=document.getElementById("metode").value;
+
+let info=document.getElementById("infoPembayaran");
+
+if(metode=="DANA"){
+
+info.innerHTML="<b>DANA</b><br>081234567890 a.n Dina Bakery";
+
+}
+
+else if(metode=="ShopeePay"){
+
+info.innerHTML="<b>ShopeePay</b><br>081234567890 a.n Dina Bakery";
+
+}
+
+else if(metode=="BRI"){
+
+info.innerHTML="<b>Bank BRI</b><br>123456789012345";
+
+}
+
+else if(metode=="BNI"){
+
+info.innerHTML="<b>Bank BNI</b><br>9876543210";
+
+}
+
+else if(metode=="SeaBank"){
+
+info.innerHTML="<b>SeaBank</b><br>901234567890";
+
+}
+
+else{
+
+info.innerHTML="Silakan pilih metode pembayaran.";
+
+}
+
+}
+
+function checkout(){
+
+let nama=document.getElementById("nama").value;
+
+let alamat=document.getElementById("alamat").value;
+
+let hp=document.getElementById("hp").value;
+
+let metode=document.getElementById("metode").value;
+
+if(keranjang.length==0){
+
+alert("Keranjang masih kosong!");
+
+return;
+
+}
+
+if(nama==""){
+
+alert("Silakan isi nama.");
+
+return;
+
+}
+
+if(alamat==""){
+
+alert("Silakan isi alamat.");
+
+return;
+
+}
+
+if(hp==""){
+
+alert("Silakan isi nomor HP.");
+
+return;
+
+}
+
+if(metode==""){
+
+alert("Silakan pilih metode pembayaran.");
+
+return;
+
+}
+
+alert(
+
+"===== PESANAN BERHASIL =====\n\n"+
+
+"Nama : "+nama+
+
+"\nAlamat : "+alamat+
+
+"\nNo HP : "+hp+
+
+"\nPembayaran : "+metode+
+
+"\n\nTotal Belanja : Rp "+total.toLocaleString("id-ID")+
+
+"\n\nTerima kasih telah berbelanja di Dina Bakery."
+
+);
+
+keranjang=[];
+
+tampilKeranjang();
+
+document.getElementById("nama").value="";
+
+document.getElementById("alamat").value="";
+
+document.getElementById("hp").value="";
+
+document.getElementById("metode").value="";
+
+document.getElementById("infoPembayaran").innerHTML="Silakan pilih metode pembayaran.";
+
+}
+
+</script>
+
+</body>
+
+</html>
